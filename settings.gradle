@@ -1,0 +1,2 @@
+rootProject.name = "Mapnesia App"
+include ':app'
