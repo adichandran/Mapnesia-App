@@ -1,19 +1,298 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bluesky"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.Navigation.AboutFragment">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:text="About Fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/primaryDarkColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/firstlayer">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen30"
+                        android:layout_marginBottom="@dimen/dimen30"
+                        app:cardCornerRadius="360dp">
+
+                        <ImageView
+                            android:id="@+id/profilehome"
+                            android:layout_width="@dimen/dimen150"
+                            android:layout_height="@dimen/dimen150"
+                            android:src="@drawable/profile"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/secondlayer">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen40"
+                    android:layout_marginTop="@dimen/dimen20"
+                    android:layout_marginBottom="@dimen/dimen32">
+
+                    <TextView
+                        android:id="@+id/satu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perkenalkan Saya"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/dua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adi Chandra N."
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:layout_marginLeft="@dimen/dimen4"
+                        android:textSize="@dimen/dimensp18"
+                        android:layout_toRightOf="@id/satu"/>
+
+                    <TextView
+                        android:id="@+id/tiga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saya Lahir di"
+                        android:layout_below="@id/satu"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimensp18" />
+
+                    <TextView
+                        android:id="@+id/empat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dimen4"
+                        android:text="Bandung, 19 September"
+                        android:layout_below="@id/satu"
+                        android:layout_toEndOf="@id/tiga"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/lima"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="2000. "
+                        android:layout_below="@id/empat"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/enam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saya anak"
+                        android:layout_below="@id/empat"
+                        android:layout_toEndOf="@id/lima"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/tujuh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dimen4"
+                        android:text="Pertama"
+                        android:layout_below="@id/empat"
+                        android:layout_toEndOf="@id/enam"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/delapan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen4"
+                        android:text="Dari dua"
+                        android:layout_below="@id/empat"
+                        android:layout_toEndOf="@id/tujuh"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/sembilan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="bersaudara."
+                        android:layout_below="@id/tujuh"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18"
+                        android:textColor="@color/white"/>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/hobby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dimen30"
+                android:layout_marginStart="@dimen/dimen40"
+                android:layout_marginEnd="@dimen/dimen20">
+
+                <TextView
+                    android:id="@+id/txt_social"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen10"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/dimensp28"
+                    android:text="Social Media"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/facebook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen20"
+                            android:layout_below="@id/txt_social"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/facebook"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/insta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_social"
+                            android:layout_toEndOf="@id/facebook"
+                            android:layout_marginBottom="@dimen/dimen20"
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/instagram"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/github"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_social"
+                            android:layout_toEndOf="@id/insta"
+                            android:layout_marginBottom="@dimen/dimen20"
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/github"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/whatsapp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_social"
+                            android:layout_toEndOf="@id/github"
+                            android:layout_marginBottom="@dimen/dimen20"
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/whatsapp"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/maps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_kuy"
+                    android:layout_below="@id/facebook"
+                    android:layout_marginTop="@dimen/dimen30"
+                    android:scaleType="center"
+                    android:textColor="@color/white"
+                    android:text="Find Me"
+                    android:textAllCaps="false"/>
+
+                <Button
+                    android:id="@+id/about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_kuy"
+                    android:layout_below="@id/maps"
+                    android:layout_marginTop="@dimen/dimen30"
+                    android:scaleType="center"
+                    android:textColor="@color/white"
+                    android:text="About Apps"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

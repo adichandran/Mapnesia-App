@@ -54,22 +54,48 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <RelativeLayout
         android:id="@+id/buttonGo"
-        android:layout_width="@dimen/dimen280"
-        android:layout_height="@dimen/dimen46"
-        android:background="@drawable/btn_kuy"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen5"
+        tools:ignore="MissingConstraints"
         android:onClick="btnGo"
-        android:text="Lets Go"
-        android:textAllCaps="false"
-        android:textColor="@color/secondaryColor"
-        android:textSize="@dimen/dimensp18"
+        android:background="@drawable/btn_kuy"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
+
+        <TextView
+            android:id="@+id/kuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen8"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Kuy"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen18"/>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/dimen24"
+            android:layout_height="@dimen/dimen24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen30">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrownext" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"

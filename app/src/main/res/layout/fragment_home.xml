@@ -4,16 +4,96 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primaryLightColor"
-    tools:context=".Fragment.Navigation.HomeFragment">
+    tools:context=".Fragment.Navigation.HomeFragment"
+    android:paddingRight="@dimen/dimen20"
+    android:paddingLeft="@dimen/dimen20">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:text="Home Fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dimen30"
+        android:layout_marginLeft="@dimen/dimen16"
+        android:layout_marginRight="@dimen/dimen16"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimensp22"
+            android:text="Halo, Selamat Datang ..."/>
+
+        <RelativeLayout
+            android:id="@+id/buttonGo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen24"
+            android:padding="@dimen/dimen14"
+            tools:ignore="MissingConstraints"
+            android:background="@drawable/edit_text">
+
+
+            <EditText
+                android:id="@+id/kuy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:inputType="text"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginStart="@dimen/dimen5"
+                android:hint="Siapa Pahlawan yang mau di cari ?"
+                android:textColorHint="@color/whitebone"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/dimen24"
+                android:layout_height="@dimen/dimen24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/search" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen24">
+
+            <TextView
+                android:id="@+id/dailyact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/dimensp22"
+                android:text="Rekomendasi Pahlawan"
+                android:textColor="@color/white"/>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/daily_act"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen180"
+                android:layout_marginTop="@dimen/dimen14"
+                android:layout_below="@id/dailyact">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

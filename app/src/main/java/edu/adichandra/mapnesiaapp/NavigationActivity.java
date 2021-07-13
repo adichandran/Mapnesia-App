@@ -42,7 +42,7 @@ public class NavigationActivity extends AppCompatActivity {
         List<MenuItem> menuItems = new ArrayList<>();
 
         menuItems.add(new MenuItem("Home",R.drawable.home));
-        menuItems.add(new MenuItem("List Pahlawan",R.mipmap.ic_launcher));
+        menuItems.add(new MenuItem("List Pahlawan",R.drawable.pahlawan));
         menuItems.add(new MenuItem("About",R.drawable.about));
 
         navigationDrawer.setMenuItemList(menuItems);

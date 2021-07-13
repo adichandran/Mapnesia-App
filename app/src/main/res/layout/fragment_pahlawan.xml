@@ -3,17 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6785ff"
-    tools:context=".Fragment.Navigation.PahlawanFragment">
+    tools:context=".Fragment.Navigation.PahlawanFragment"
+    android:padding="@dimen/dimen20">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listpahlawan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:text="Pahawan Fragment" />
+        android:layout_marginTop="@dimen/dimen14"
+        android:layout_below="@id/dailyact">
+    </androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>
