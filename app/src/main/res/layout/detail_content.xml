@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen18"
+        android:layout_marginRight="@dimen/dimen18"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dimen180"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen18"
+            android:src="@mipmap/ic_launcher_foreground"
+            android:id="@+id/image"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dimen12"
+            android:layout_marginTop="@dimen/dimen12">
+
+            <TextView
+                android:id="@+id/txt_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Nama"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimensp24" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_lahir"
+                android:fontFamily="sans-serif-light"
+                android:text="valueLahir"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimensp18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dimen12"
+            android:layout_marginTop="@dimen/dimen12">
+
+
+
+            <TextView
+                android:id="@+id/txt_asal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Berasal dari"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimensp24" />
+
+            <TextView
+                android:id="@+id/asal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_lahir"
+                android:fontFamily="sans-serif-light"
+                android:text="valueLahir"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimensp18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dimen12"
+            android:layout_marginTop="@dimen/dimen12">
+
+            <TextView
+                android:id="@+id/txt_lahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Lahir"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimensp24" />
+
+            <TextView
+                android:id="@+id/lahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_lahir"
+                android:fontFamily="sans-serif-light"
+                android:text="valueLahir"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimensp18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dimen12"
+            android:layout_marginTop="@dimen/dimen12">
+
+            <TextView
+                android:id="@+id/txt_meninggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Meninggal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimensp24" />
+
+            <TextView
+                android:id="@+id/meninggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_lahir"
+                android:fontFamily="sans-serif-light"
+                android:text="valueMeninggal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimensp18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dimen12"
+            android:layout_marginTop="@dimen/dimen12">
+
+            <TextView
+                android:id="@+id/txt_riwayat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Riwayat Singkat"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimensp24" />
+
+            <TextView
+                android:id="@+id/riwayat_singkat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_lahir"
+                android:layout_marginTop="@dimen/dimen16"
+                android:fontFamily="sans-serif-light"
+                android:text="valueRiwayat"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

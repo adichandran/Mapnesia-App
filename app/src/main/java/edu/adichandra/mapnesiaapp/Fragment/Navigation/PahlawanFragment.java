@@ -19,8 +19,10 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 import edu.adichandra.mapnesiaapp.Adapter.PahlawanAdapter;
+import edu.adichandra.mapnesiaapp.Model.PahlawanModel;
 import edu.adichandra.mapnesiaapp.R;
 
 /**
@@ -36,10 +38,16 @@ public class PahlawanFragment extends Fragment {
 
     private String mParam1;
     private String mParam2;
+    private List<PahlawanModel> listPahlawan;
 
-    ArrayList<String> namaPahlawan = new ArrayList<>();
-    ArrayList<String> img = new ArrayList<>();
-    ArrayList<String> asal = new ArrayList<>();
+//    ArrayList<String> namaPahlawan = new ArrayList<>();
+//    ArrayList<String> img = new ArrayList<>();
+//    ArrayList<String> asal = new ArrayList<>();
+//    ArrayList<String> lahir = new ArrayList<>();
+//    ArrayList<String> meninggal = new ArrayList<>();
+//    ArrayList<String> riwayat_singkat = new ArrayList<>();
+
+
 
     public PahlawanFragment() {
         // Required empty public constructor
@@ -53,7 +61,7 @@ public class PahlawanFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment PahlawanFragment.
      */
-    // TODO: Rename and change types and number of parameters
+
     public static PahlawanFragment newInstance(String param1, String param2) {
         PahlawanFragment fragment = new PahlawanFragment();
         Bundle args = new Bundle();
@@ -69,6 +77,7 @@ public class PahlawanFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            listPahlawan = new ArrayList<>();
         }
     }
 
@@ -78,12 +87,15 @@ public class PahlawanFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_pahlawan, container, false);
 
+
         final FragmentActivity fragment = getActivity();
         // get the reference of RecyclerView
         RecyclerView recyclerView = view.findViewById(R.id.listpahlawan);
         // set a LinearLayoutManager with default vertical orientation
         LinearLayoutManager layoutManager = new LinearLayoutManager(fragment, LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
+
+        listPahlawan = new ArrayList<>();
 
         try {
             // get JSONObject from JSON file
@@ -94,17 +106,25 @@ public class PahlawanFragment extends Fragment {
             for (int i = 0; i < userArray.length(); i++) {
                 // create a JSONObject for fetching single user data
                 JSONObject userDetail = userArray.getJSONObject(i);
+
+                PahlawanModel pahlawan = new PahlawanModel();
                 // fetch email and name and store it in arraylist
-                namaPahlawan.add(userDetail.getString("pahlawan_name"));
-                img.add(userDetail.getString("pahlawan_image"));
-                asal.add(userDetail.getString("asal"));
+
+                pahlawan.setNama(userDetail.getString("pahlawan_name"));
+                pahlawan.setImage(userDetail.getString("pahlawan_image"));
+                pahlawan.setAsal(userDetail.getString("asal"));
+                pahlawan.setLahir(userDetail.getString("lahir"));
+                pahlawan.setMeninggal(userDetail.getString("meninggal"));
+                pahlawan.setSerjarah_singkat(userDetail.getString("riwayat"));
+                listPahlawan.add(pahlawan);
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         //  call the constructor of CustomAdapter to send the reference and data to Adapter
-        PahlawanAdapter pahlawanAdapter = new PahlawanAdapter(PahlawanFragment.this, namaPahlawan, img, asal);
+        PahlawanAdapter pahlawanAdapter = new PahlawanAdapter(view.getContext(),listPahlawan);
+        recyclerView.setLayoutManager(new LinearLayoutManager(fragment));
         recyclerView.setAdapter(pahlawanAdapter); // set the Adapter to RecyclerView
 
         return view;

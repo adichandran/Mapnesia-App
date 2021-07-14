@@ -82,8 +82,6 @@
                 android:text="Rekomendasi Pahlawan"
                 android:textColor="@color/white"/>
 
-
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/daily_act"
                 android:layout_width="match_parent"

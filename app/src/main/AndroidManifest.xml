@@ -3,6 +3,7 @@
     package="edu.adichandra.mapnesiaapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MapnesiaApp">
-        <activity android:name=".NavigationActivity"></activity>
+        <activity android:name=".Fragment.Navigation.DetailActivity"></activity>
+        <activity android:name=".NavigationActivity" />
         <activity android:name=".WalkthroughActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
