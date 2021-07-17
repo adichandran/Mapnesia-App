@@ -6,6 +6,7 @@ public class PahlawanModel {
     private String asal;
     private String lahir;
     private String meninggal;
+    private String makam;
     private String serjarah_singkat;
 
     public PahlawanModel() {
@@ -14,6 +15,7 @@ public class PahlawanModel {
         this.asal = asal;
         this.lahir = lahir;
         this.meninggal = meninggal;
+        this.makam = makam;
         this.serjarah_singkat = serjarah_singkat;
     }
 
@@ -63,5 +65,13 @@ public class PahlawanModel {
 
     public void setSerjarah_singkat(String serjarah_singkat) {
         this.serjarah_singkat = serjarah_singkat;
+    }
+
+    public String getMakam() {
+        return makam;
+    }
+
+    public void setMakam(String makam) {
+        this.makam = makam;
     }
 }

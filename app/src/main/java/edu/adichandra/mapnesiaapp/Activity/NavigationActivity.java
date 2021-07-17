@@ -1,4 +1,4 @@
-package edu.adichandra.mapnesiaapp;
+package edu.adichandra.mapnesiaapp.Activity;
 
 /*
  * NIM   : 10118015
@@ -12,7 +12,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.shrikanthravi.customnavigationdrawer2.data.MenuItem;
 import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;
@@ -23,6 +31,7 @@ import java.util.List;
 import edu.adichandra.mapnesiaapp.Fragment.Navigation.AboutFragment;
 import edu.adichandra.mapnesiaapp.Fragment.Navigation.HomeFragment;
 import edu.adichandra.mapnesiaapp.Fragment.Navigation.PahlawanFragment;
+import edu.adichandra.mapnesiaapp.R;
 
 public class NavigationActivity extends AppCompatActivity {
 
@@ -128,6 +137,9 @@ public class NavigationActivity extends AppCompatActivity {
             public void onDrawerStateChanged(int newState) {
                 System.out.println("State "+newState);
             }
+
         });
+
+
     }
 }

@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.Navigation.AboutFragment">
 
     <ScrollView
@@ -29,20 +28,13 @@
                     android:gravity="center"
                     android:background="@drawable/firstlayer">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dimen30"
-                        android:layout_marginBottom="@dimen/dimen30"
-                        app:cardCornerRadius="360dp">
-
-                        <ImageView
-                            android:id="@+id/profilehome"
-                            android:layout_width="@dimen/dimen150"
-                            android:layout_height="@dimen/dimen150"
-                            android:src="@drawable/profile"/>
-
-                    </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:id="@+id/profilehome"
+                        android:layout_width="@dimen/dimen150"
+                        android:layout_height="@dimen/dimen150"
+                        android:layout_marginTop="@dimen/dimen12"
+                        android:layout_marginBottom="@dimen/dimen12"
+                        android:src="@drawable/mapnesia"/>
 
                 </LinearLayout>
 
@@ -58,106 +50,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/dimen40"
-                    android:layout_marginTop="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen40"
+                    android:layout_marginTop="@dimen/dimen32"
                     android:layout_marginBottom="@dimen/dimen32">
 
                     <TextView
                         android:id="@+id/satu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Perkenalkan Saya"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="@dimen/dimensp18"
-                        android:textColor="@color/white"/>
-
-                    <TextView
-                        android:id="@+id/dua"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Adi Chandra N."
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/montserrat"
-                        android:layout_marginLeft="@dimen/dimen4"
-                        android:textSize="@dimen/dimensp18"
-                        android:layout_toRightOf="@id/satu"/>
-
-                    <TextView
-                        android:id="@+id/tiga"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Saya Lahir di"
-                        android:layout_below="@id/satu"
-                        android:fontFamily="@font/montserrat"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/dimensp18" />
-
-                    <TextView
-                        android:id="@+id/empat"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginStart="@dimen/dimen4"
-                        android:text="Bandung, 19 September"
-                        android:layout_below="@id/satu"
-                        android:layout_toEndOf="@id/tiga"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="@dimen/dimensp18"
-                        android:textColor="@color/white"/>
-
-                    <TextView
-                        android:id="@+id/lima"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="2000. "
-                        android:layout_below="@id/empat"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="@dimen/dimensp18"
-                        android:textColor="@color/white"/>
-
-                    <TextView
-                        android:id="@+id/enam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Saya anak"
-                        android:layout_below="@id/empat"
-                        android:layout_toEndOf="@id/lima"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="@dimen/dimensp18"
-                        android:textColor="@color/white"/>
-
-                    <TextView
-                        android:id="@+id/tujuh"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginStart="@dimen/dimen4"
-                        android:text="Pertama"
-                        android:layout_below="@id/empat"
-                        android:layout_toEndOf="@id/enam"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="@dimen/dimensp18"
-                        android:textColor="@color/white"/>
-
-                    <TextView
-                        android:id="@+id/delapan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dimen4"
-                        android:text="Dari dua"
-                        android:layout_below="@id/empat"
-                        android:layout_toEndOf="@id/tujuh"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="@dimen/dimensp18"
-                        android:textColor="@color/white"/>
-
-                    <TextView
-                        android:id="@+id/sembilan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="bersaudara."
-                        android:layout_below="@id/tujuh"
+                        android:text="Mapnesia app adalah aplikasi edukasi tentang mengenal para pahlawan indonesia. disini kamu akan mengenal lebih jauh para pahlawan indonesia"
                         android:fontFamily="@font/montserrat"
                         android:textSize="@dimen/dimensp18"
                         android:textColor="@color/white"/>

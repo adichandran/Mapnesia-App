@@ -1,4 +1,4 @@
-package edu.adichandra.mapnesiaapp;
+package edu.adichandra.mapnesiaapp.Activity;
 
 /*
  * NIM   : 10118015
@@ -12,11 +12,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import edu.adichandra.mapnesiaapp.R;
 
 public class SplashActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package edu.adichandra.mapnesiaapp;
+package edu.adichandra.mapnesiaapp.View;
 
 /*
  * NIM   : 10118015

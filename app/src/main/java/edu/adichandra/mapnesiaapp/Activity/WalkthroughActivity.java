@@ -1,4 +1,4 @@
-package edu.adichandra.mapnesiaapp;
+package edu.adichandra.mapnesiaapp.Activity;
 
 /*
  * NIM   : 10118015
@@ -14,9 +14,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 
 import com.cuberto.liquid_swipe.LiquidPager;
+
+import edu.adichandra.mapnesiaapp.R;
+import edu.adichandra.mapnesiaapp.View.ViewPager;
 
 public class WalkthroughActivity extends AppCompatActivity {
 
@@ -25,7 +27,7 @@ public class WalkthroughActivity extends AppCompatActivity {
 
     LiquidPager pager;
     ViewPager viewPager;
-
+    private static int SPLASH_TIME_OUT = 3000;
     SharedPreferences preferences;
 
     @Override
@@ -38,18 +40,15 @@ public class WalkthroughActivity extends AppCompatActivity {
         pager.setAdapter(viewPager);
 
         preferences = getSharedPreferences("myPref",MODE_PRIVATE);
+        boolean isFirst = preferences.getBoolean(FIRST_USER,false);
 
-        getPrefData();
-        savePrefData();
-    }
-
-    public void getPrefData() {
-        if (preferences.getBoolean(FIRST_USER,false)){
+        if (isFirst){
             Intent intent = new Intent(WalkthroughActivity.this,NavigationActivity.class);
             startActivity(intent);
+        } else {
+            savePrefData();
         }
     }
-
 
     private void savePrefData() {
         preferences.edit().putBoolean(FIRST_USER, true).apply();

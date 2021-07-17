@@ -19,15 +19,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageView1"
         android:layout_width="250dp"
         android:layout_height="259dp"
-        android:layout_marginTop="@dimen/dimen112"
-        android:src="@drawable/cliplostinthought"
+        android:layout_marginTop="@dimen/dimen60"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textappname" />
+        app:layout_constraintTop_toBottomOf="@+id/textappname"
+        app:lottie_rawRes="@raw/go"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -82,16 +83,18 @@
 
 
         <RelativeLayout
-            android:layout_width="@dimen/dimen24"
-            android:layout_height="@dimen/dimen24"
+            android:layout_width="@dimen/dimen60"
+            android:layout_height="@dimen/dimen48"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/dimen30">
 
-            <ImageView
+            <com.airbnb.lottie.LottieAnimationView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/arrownext" />
+                app:lottie_rawRes="@raw/arrow_right"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
 
         </RelativeLayout>
 

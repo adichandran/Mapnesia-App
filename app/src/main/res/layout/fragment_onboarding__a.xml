@@ -31,14 +31,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageView1"
         android:layout_width="250dp"
         android:layout_height="259dp"
-        android:layout_marginTop="@dimen/dimen112"
-        android:src="@drawable/readingbooks"
+        android:layout_marginTop="@dimen/dimen60"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:lottie_rawRes="@raw/hello_hi"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
 
     <TextView
         android:id="@+id/textView2"

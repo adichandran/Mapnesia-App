@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".WalkthroughActivity">
+    tools:context=".Activity.WalkthroughActivity">
 
     <com.cuberto.liquid_swipe.LiquidPager
         android:id="@+id/pager"

@@ -12,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MapnesiaApp">
         <activity android:name=".Fragment.Navigation.DetailActivity"></activity>
-        <activity android:name=".NavigationActivity" />
-        <activity android:name=".WalkthroughActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".Activity.NavigationActivity" />
+        <activity android:name=".Activity.WalkthroughActivity" />
+        <activity android:name=".Activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

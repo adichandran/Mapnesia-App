@@ -1,16 +1,19 @@
 package edu.adichandra.mapnesiaapp.Fragment.Navigation;
 
-import android.content.res.AssetManager;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,13 +42,7 @@ public class PahlawanFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private List<PahlawanModel> listPahlawan;
-
-//    ArrayList<String> namaPahlawan = new ArrayList<>();
-//    ArrayList<String> img = new ArrayList<>();
-//    ArrayList<String> asal = new ArrayList<>();
-//    ArrayList<String> lahir = new ArrayList<>();
-//    ArrayList<String> meninggal = new ArrayList<>();
-//    ArrayList<String> riwayat_singkat = new ArrayList<>();
+    private PahlawanAdapter pahlawanAdapter;
 
 
 
@@ -77,7 +74,6 @@ public class PahlawanFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-            listPahlawan = new ArrayList<>();
         }
     }
 
@@ -86,17 +82,41 @@ public class PahlawanFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_pahlawan, container, false);
-
-
         final FragmentActivity fragment = getActivity();
-        // get the reference of RecyclerView
-        RecyclerView recyclerView = view.findViewById(R.id.listpahlawan);
-        // set a LinearLayoutManager with default vertical orientation
-        LinearLayoutManager layoutManager = new LinearLayoutManager(fragment, LinearLayoutManager.VERTICAL,false);
-        recyclerView.setLayoutManager(layoutManager);
+
+        EditText editText = view.findViewById(R.id.edPahlawan);
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
 
         listPahlawan = new ArrayList<>();
+        getData(listPahlawan);
 
+        // get the reference of RecyclerView
+        RecyclerView recyclerView = view.findViewById(R.id.listpahlawan);
+
+        //  call the constructor of CustomAdapter to send the reference and data to Adapter
+        pahlawanAdapter = new PahlawanAdapter(view.getContext(),listPahlawan);
+        recyclerView.setLayoutManager(new GridLayoutManager(fragment,3,LinearLayoutManager.VERTICAL,false));
+        recyclerView.setAdapter(pahlawanAdapter); // set the Adapter to RecyclerView
+
+        return view;
+    }
+
+    public void getData(List<PahlawanModel> listPahlawan){
         try {
             // get JSONObject from JSON file
             JSONObject obj = new JSONObject(loadJSONFromAsset());
@@ -115,20 +135,27 @@ public class PahlawanFragment extends Fragment {
                 pahlawan.setAsal(userDetail.getString("asal"));
                 pahlawan.setLahir(userDetail.getString("lahir"));
                 pahlawan.setMeninggal(userDetail.getString("meninggal"));
+                pahlawan.setMakam(userDetail.getString("makam"));
                 pahlawan.setSerjarah_singkat(userDetail.getString("riwayat"));
-                listPahlawan.add(pahlawan);
+                this.listPahlawan.add(pahlawan);
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        //  call the constructor of CustomAdapter to send the reference and data to Adapter
-        PahlawanAdapter pahlawanAdapter = new PahlawanAdapter(view.getContext(),listPahlawan);
-        recyclerView.setLayoutManager(new LinearLayoutManager(fragment));
-        recyclerView.setAdapter(pahlawanAdapter); // set the Adapter to RecyclerView
-
-        return view;
     }
+
+    // pencarian data pahlawan berdasarkan nama
+    private void filter(String text) {
+        ArrayList<PahlawanModel> filterlist = new ArrayList<>();
+        for (PahlawanModel item : listPahlawan){
+            if (item.getNama().toLowerCase().contains(text.toLowerCase())){
+                filterlist.add(item);
+            }
+        }
+
+        pahlawanAdapter.filterList(filterlist);
+    }
+
 
     public String loadJSONFromAsset() {
         String json = null;

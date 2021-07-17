@@ -28,12 +28,12 @@ import edu.adichandra.mapnesiaapp.Fragment.Navigation.DetailActivity;
 import edu.adichandra.mapnesiaapp.Model.PahlawanModel;
 import edu.adichandra.mapnesiaapp.R;
 
-public class PahlawanAdapter extends RecyclerView.Adapter<PahlawanAdapter.MyViewHolder> {
+public class RekPahlawanAdapter extends RecyclerView.Adapter<RekPahlawanAdapter.MyViewHolder> {
 
     private Context mContext;
     private List<PahlawanModel> mData;
 
-    public PahlawanAdapter(Context mContext, List<PahlawanModel> mData) {
+    public RekPahlawanAdapter(Context mContext, List<PahlawanModel> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -42,7 +42,7 @@ public class PahlawanAdapter extends RecyclerView.Adapter<PahlawanAdapter.MyView
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // infalte the item Layout
         View view;
-        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_pahlawan, parent, false);
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_rek_pahlawan, parent, false);
         final MyViewHolder viewHolder = new MyViewHolder(view);
         viewHolder.view_container.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,18 +64,16 @@ public class PahlawanAdapter extends RecyclerView.Adapter<PahlawanAdapter.MyView
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         // set the data in items
-        holder.nama_pahlawan.setText(mData.get(position).getNama());
         Picasso.get().load(mData.get(position).getImage()).into(holder.image);
     }
 
 
     @Override
     public int getItemCount() {
-        return mData.size();
+        return 10;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView nama_pahlawan;
         ImageView image;
         LinearLayout view_container;
 
@@ -84,7 +82,6 @@ public class PahlawanAdapter extends RecyclerView.Adapter<PahlawanAdapter.MyView
 
             // get the reference of item view's
             view_container= itemView.findViewById(R.id.container);
-            nama_pahlawan = (TextView) itemView.findViewById(R.id.txt_name);
             image = (ImageView) itemView.findViewById(R.id.img_pahlawan);
         }
     }
