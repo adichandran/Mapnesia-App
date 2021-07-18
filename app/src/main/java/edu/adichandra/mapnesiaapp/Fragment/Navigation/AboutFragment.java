@@ -77,8 +77,6 @@ public class AboutFragment extends Fragment {
 
         facebook = view.findViewById(R.id.facebook);
         instagram = view.findViewById(R.id.insta);
-        github = view.findViewById(R.id.github);
-        whatsapp = view.findViewById(R.id.whatsapp);
         maps = view.findViewById(R.id.maps);
         about = view.findViewById(R.id.about);
 
@@ -95,22 +93,6 @@ public class AboutFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 gotoUrl("https://www.instagram.com/hi_adichandra/");
-            }
-        });
-
-        //OnClick Button instagram
-        github.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("https://github.com/adichandran");
-            }
-        });
-
-        //OnClick Button instagram
-        whatsapp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("https://api.whatsapp.com/send/?phone=6287812600615");
             }
         });
 

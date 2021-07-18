@@ -3,55 +3,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/background"
     tools:context=".Fragment.Navigation.PahlawanFragment"
     android:id="@+id/frame_layout">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen16"
-        android:padding="@dimen/dimen14"
-        tools:ignore="MissingConstraints"
-        android:background="@drawable/edit_text">
-
-
-        <EditText
-            android:id="@+id/edPahlawan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="@null"
-            android:inputType="text"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginStart="@dimen/dimen5"
-            android:hint="Siapa Pahlawan yang mau di cari ?"
-            android:textColorHint="@color/primaryLightColor"
-            android:textStyle="bold"
-            android:textColor="@color/primaryLightColor"
-            android:textSize="14sp"/>
-
+        android:orientation="vertical"
+        android:background="@drawable/searchlayer">
 
         <RelativeLayout
-            android:layout_width="@dimen/dimen24"
-            android:layout_height="@dimen/dimen24"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen12"
+            android:padding="@dimen/dimen14"
+            tools:ignore="MissingConstraints"
+            android:background="@drawable/edit_text">
 
-            <ImageView
-                android:layout_width="wrap_content"
+
+            <EditText
+                android:id="@+id/edPahlawan"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/search" />
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:inputType="text"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginStart="@dimen/dimen5"
+                android:hint="Siapa Pahlawan yang mau di cari ?"
+                android:textColorHint="@color/white"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/dimen24"
+                android:layout_height="@dimen/dimen24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/search" />
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listpahlawan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/edittext">
+        android:layout_margin="@dimen/dimen12"
+        android:layout_below="@id/edittext"
+        android:overScrollMode="never">
     </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

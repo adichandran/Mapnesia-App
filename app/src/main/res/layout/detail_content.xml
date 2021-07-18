@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:background="@color/white">
+    android:background="?attr/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,6 +55,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/montserrat"
+                            android:textColor="?attr/colorOnBackground"
                             android:text="Nama"
                             android:textSize="@dimen/dimensp18" />
 
@@ -67,7 +68,7 @@
                         android:layout_below="@id/txt_lahir"
                         android:fontFamily="sans-serif-medium"
                         android:text="valueLahir"
-                        android:textColor="@color/black"
+                        android:textColor="?attr/colorOnBackground"
                         android:textSize="@dimen/dimensp18" />
 
                 </LinearLayout>
@@ -97,6 +98,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/montserrat"
+                            android:textColor="?attr/colorOnBackground"
                             android:text="Berasal dari"
                             android:textSize="@dimen/dimensp18" />
 
@@ -109,7 +111,7 @@
                         android:layout_below="@id/txt_lahir"
                         android:fontFamily="sans-serif-medium"
                         android:text="valueAsal"
-                        android:textColor="@color/black"
+                        android:textColor="?attr/colorOnBackground"
                         android:textSize="@dimen/dimensp18" />
 
                 </LinearLayout>
@@ -145,7 +147,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
                     android:text="Lahir"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnBackground"
                     android:textSize="@dimen/dimensp24" />
 
             </LinearLayout>
@@ -157,7 +159,7 @@
                 android:layout_below="@id/txt_lahir"
                 android:fontFamily="sans-serif-light"
                 android:text="valueLahir"
-                android:textColor="@color/black"
+                android:textColor="?attr/colorOnBackground"
                 android:textSize="@dimen/dimensp18" />
 
         </LinearLayout>
@@ -188,7 +190,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
                     android:text="Meninggal"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnBackground"
                     android:textSize="@dimen/dimensp24" />
 
             </LinearLayout>
@@ -200,7 +202,7 @@
                 android:layout_below="@id/txt_lahir"
                 android:fontFamily="sans-serif-light"
                 android:text="valueMeninggal"
-                android:textColor="@color/black"
+                android:textColor="?attr/colorOnBackground"
                 android:textSize="@dimen/dimensp18" />
 
         </LinearLayout>
@@ -231,7 +233,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
                     android:text="Di Makamkan"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnBackground"
                     android:textSize="@dimen/dimensp24" />
 
             </LinearLayout>
@@ -243,7 +245,7 @@
                 android:layout_below="@id/txt_lahir"
                 android:fontFamily="sans-serif-light"
                 android:text="valueMakam"
-                android:textColor="@color/black"
+                android:textColor="?attr/colorOnBackground"
                 android:textSize="@dimen/dimensp18" />
 
         </LinearLayout>
@@ -275,7 +277,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
                     android:text="Riwayat Singkat"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnBackground"
                     android:textSize="@dimen/dimensp24" />
 
             </LinearLayout>
@@ -288,7 +290,7 @@
                 android:layout_marginTop="@dimen/dimen16"
                 android:fontFamily="sans-serif-light"
                 android:text="valueRiwayat"
-                android:textColor="@color/black"
+                android:textColor="?attr/colorOnBackground"
                 android:textSize="16sp" />
 
         </LinearLayout>

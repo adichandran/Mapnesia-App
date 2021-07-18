@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/background"
     tools:context=".Activity.NavigationActivity">
 
     <com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         app:appbarTitleTextColor="@android:color/white"
         app:HamMenuIconTintColor="@android:color/white"
-        app:appbarColor="@color/primaryColor">
+        app:appbarColor="?attr/colorPrimary">
 
         <FrameLayout
             android:id="@+id/framelayout"

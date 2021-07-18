@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/background"
     tools:context=".Fragment.Navigation.AboutFragment">
 
     <ScrollView
@@ -19,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@color/primaryDarkColor">
+                android:background="?attr/colorPrimaryVariant">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -85,81 +87,43 @@
                     android:fontFamily="@font/montserrat"
                     android:textSize="@dimen/dimensp28"
                     android:text="Social Media"
-                    android:textColor="@color/black"/>
+                    android:textColor="?attr/colorOnBackground"/>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                        android:layout_marginRight="@dimen/dimen12">
 
                         <com.google.android.material.floatingactionbutton.FloatingActionButton
                             android:id="@+id/facebook"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/dimen20"
                             android:layout_below="@id/txt_social"
-                            android:background="@color/white"
-                            android:backgroundTint="@color/white"
+                            android:layout_margin="@dimen/dimen10"
                             android:src="@drawable/facebook"
+                            app:backgroundTint="?attr/background"
                             tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                        android:layout_height="wrap_content">
 
                         <com.google.android.material.floatingactionbutton.FloatingActionButton
                             android:id="@+id/insta"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/txt_social"
+                            android:layout_margin="@dimen/dimen10"
                             android:layout_toEndOf="@id/facebook"
-                            android:layout_marginBottom="@dimen/dimen20"
-                            android:backgroundTint="@color/white"
                             android:src="@drawable/instagram"
-                            tools:ignore="ContentDescription" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-                        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/github"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/txt_social"
-                            android:layout_toEndOf="@id/insta"
-                            android:layout_marginBottom="@dimen/dimen20"
-                            android:backgroundTint="@color/white"
-                            android:src="@drawable/github"
-                            tools:ignore="ContentDescription" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-                        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/whatsapp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/txt_social"
-                            android:layout_toEndOf="@id/github"
-                            android:layout_marginBottom="@dimen/dimen20"
-                            android:backgroundTint="@color/white"
-                            android:src="@drawable/whatsapp"
+                            app:backgroundTint="?attr/background"
                             tools:ignore="ContentDescription" />
 
                     </LinearLayout>
@@ -187,7 +151,7 @@
                     android:layout_marginTop="@dimen/dimen30"
                     android:scaleType="center"
                     android:textColor="@color/white"
-                    android:text="About Apps"
+                    android:text="About Version"
                     android:textAllCaps="false"/>
 
             </LinearLayout>
