@@ -55,7 +55,7 @@
                     android:fontFamily="@font/montserrat"
                     android:gravity="center"
                     android:textColor="?attr/colorOnBackground"
-                    android:text="Ver. 1.2.0"/>
+                    android:text="Ver. 1.2.1"/>
 
                 <TextView
                     android:layout_width="match_parent"
