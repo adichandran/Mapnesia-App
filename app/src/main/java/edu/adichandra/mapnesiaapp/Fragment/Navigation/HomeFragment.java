@@ -1,7 +1,14 @@
 package edu.adichandra.mapnesiaapp.Fragment.Navigation;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,8 +17,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,9 +31,11 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.adichandra.mapnesiaapp.Activity.SplashActivity;
 import edu.adichandra.mapnesiaapp.Adapter.PahlawanAdapter;
 import edu.adichandra.mapnesiaapp.Adapter.RekPahlawanAdapter;
 import edu.adichandra.mapnesiaapp.Model.PahlawanModel;
+import edu.adichandra.mapnesiaapp.NotificationReceiver;
 import edu.adichandra.mapnesiaapp.R;
 
 import static android.widget.LinearLayout.HORIZONTAL;
@@ -140,4 +151,5 @@ public class HomeFragment extends Fragment {
         }
         return json;
     }
+
 }

@@ -102,10 +102,9 @@ public class DetailActivity extends AppCompatActivity {
     /* BackPressed metode yang berhubungan dengan situasi. */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.layout.fragment_pahlawan) {
-            //finish();
-            onBackPressed();
-
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }

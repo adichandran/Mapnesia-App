@@ -17,6 +17,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import edu.adichandra.mapnesiaapp.NotificationReceiver;
 import edu.adichandra.mapnesiaapp.R;
 
 public class SplashActivity extends AppCompatActivity {
@@ -36,6 +37,9 @@ public class SplashActivity extends AppCompatActivity {
 
         textView.startAnimation(animation);
         img.startAnimation(animation);
+
+        NotificationReceiver notificationReceiver = new NotificationReceiver();
+        notificationReceiver.setRepeatingAlarm(getBaseContext());
 
         timer = new Thread(){
             @Override

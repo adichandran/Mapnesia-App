@@ -8,6 +8,7 @@ package edu.adichandra.mapnesiaapp.Adapter;
  * Deskripsi : Adapter dari data pahlawan
  * */
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.core.app.ActivityOptionsCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -43,11 +45,15 @@ public class RekPahlawanAdapter extends RecyclerView.Adapter<RekPahlawanAdapter.
         // infalte the item Layout
         View view;
         view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_rek_pahlawan, parent, false);
+        ImageView image = view.findViewById(R.id.img_rekpahlawan);
         final MyViewHolder viewHolder = new MyViewHolder(view);
         viewHolder.view_container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(mContext, DetailActivity.class);
+
+//                ActivityOptionsCompat option = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) mContext, image, viewHolder.image.getTransitionName());
+
                 i.putExtra("pahlawan-name",mData.get(viewHolder.getAdapterPosition()).getNama());
                 i.putExtra("pahlawan-image",mData.get(viewHolder.getAdapterPosition()).getImage());
                 i.putExtra("asal",mData.get(viewHolder.getAdapterPosition()).getAsal());
@@ -56,6 +62,7 @@ public class RekPahlawanAdapter extends RecyclerView.Adapter<RekPahlawanAdapter.
                 i.putExtra("makam",mData.get(viewHolder.getAdapterPosition()).getMakam());
                 i.putExtra("riwayat",mData.get(viewHolder.getAdapterPosition()).getSerjarah_singkat());
                 mContext.startActivity(i);
+//                mContext.startActivity(i, option.toBundle());
             }
         });
         return viewHolder;
@@ -65,6 +72,7 @@ public class RekPahlawanAdapter extends RecyclerView.Adapter<RekPahlawanAdapter.
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         // set the data in items
         Picasso.get().load(mData.get(position).getImage()).into(holder.image);
+//        holder.image.setTransitionName("simple_activity_transition");
     }
 
 
@@ -82,7 +90,7 @@ public class RekPahlawanAdapter extends RecyclerView.Adapter<RekPahlawanAdapter.
 
             // get the reference of item view's
             view_container= itemView.findViewById(R.id.container);
-            image = (ImageView) itemView.findViewById(R.id.img_pahlawan);
+            image = (ImageView) itemView.findViewById(R.id.img_rekpahlawan);
         }
     }
 
