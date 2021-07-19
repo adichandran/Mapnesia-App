@@ -55,7 +55,7 @@
                     android:fontFamily="@font/montserrat"
                     android:gravity="center"
                     android:textColor="?attr/colorOnBackground"
-                    android:text="Ver. 1.2.1"/>
+                    android:text="Ver. 1.2.2"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -74,7 +74,7 @@
                     android:fontFamily="@font/montserrat"
                     android:textColor="?attr/colorOnBackground"
                     android:textSize="@dimen/dimensp18"
-                    android:text="Adi Chandra Nugraha | 10118015"/>
+                    android:text="Adi Chandra Nugraha"/>
 
             </LinearLayout>
 
