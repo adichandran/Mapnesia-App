@@ -22,7 +22,7 @@
             android:fontFamily="@font/montserrat"
             android:textColor="@color/white"
             android:textSize="@dimen/dimensp22"
-            android:text="Halo, Selamat Datang ..."/>
+            android:text="@string/halo_selamat"/>
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/imageView1"
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
                     android:textSize="@dimen/dimensp22"  
-                    android:text="Rekomendasi Pahlawan"
+                    android:text="@string/rekomendasi"
                     android:textColor="@color/white"/>
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -76,6 +76,17 @@
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_kuy"
+            android:layout_marginTop="@dimen/dimen30"
+            android:scaleType="center"
+            android:textColor="@color/white"
+            android:text="cek notif"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 

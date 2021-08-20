@@ -32,6 +32,25 @@ public class NotificationReceiver extends BroadcastReceiver {
         showAlarmNotification(context, 101);
     }
 
+    // Metode ini digunakan untuk menjalankan alarm repeating
+    public void setRepeatingAlarm(Context context) {
+
+        Intent intent = new Intent(context, NotificationReceiver.class);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+        calendar.set(Calendar.HOUR_OF_DAY, 16);
+
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, ID_REPEATING, intent, 0);
+        if (alarmManager != null) {
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        } else {
+            alarmManager.cancel(pendingIntent);
+        }
+    }
+
+
     public void showAlarmNotification(Context context, int notifId) {
         String CHANNEL_ID = "Channel_1";
         String CHANNEL_NAME = "AlarmManager channel";
@@ -39,7 +58,7 @@ public class NotificationReceiver extends BroadcastReceiver {
         //triggered when user clicks on notification(StopScript.class in this case)
         Intent resultIntent = new Intent(context.getApplicationContext(),SplashActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(context.getApplicationContext(), 0,
-               resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationManager notificationManagerCompat = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID);
@@ -74,21 +93,5 @@ public class NotificationReceiver extends BroadcastReceiver {
         }
     }
 
-    // Metode ini digunakan untuk menjalankan alarm repeating
-    public void setRepeatingAlarm(Context context) {
 
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(context, NotificationReceiver.class);
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 00);
-        calendar.set(Calendar.SECOND, 0);
-
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, ID_REPEATING, intent, 0);
-        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
-        if (alarmManager != null) {
-            alarmManager.cancel(pendingIntent);
-        }
-    }
 }

@@ -39,4 +39,5 @@
     <dimen name="dimensp30">30sp</dimen>
     <dimen name="dimensp32">32sp</dimen>
     <dimen name="dimensp36">36sp</dimen>
+    <dimen name="diimensp12">12sp</dimen>
 </resources>

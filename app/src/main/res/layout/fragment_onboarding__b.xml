@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
-        android:text="Mapnesia"
+        android:text="@string/mapnesia"
         android:textColor="@color/primaryColor"
         android:textSize="@dimen/dimensp24"
         android:textStyle="bold"
@@ -25,11 +25,12 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
         android:onClick="btnSkip"
-        android:text="Skip"
+        android:text="@string/skip"
         android:textColor="@color/primaryColor"
         android:textSize="@dimen/dimensp24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageView1"
@@ -48,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen20"
         android:fontFamily="@font/intersemibold"
-        android:text="Disini ..."
+        android:text="@string/disini"
         android:textColor="@color/primaryColor"
         android:textSize="48sp"
         android:textStyle="bold"
@@ -60,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen16"
-        android:text="kita akan mengenal sosok para\nPahlawan indonesia. Dimulai dari lahir sampai perjuangannya\nmembela Indonesia."
+        android:text="@string/wall2"
         android:lineSpacingExtra="5sp"
         android:textColor="@color/primaryColor"
         android:textSize="@dimen/dimensp18"
@@ -81,7 +82,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/circle_blank"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -90,7 +92,8 @@
             android:layout_marginStart="@dimen/dimen8"
             android:src="@drawable/circle_filled"
             app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -99,7 +102,8 @@
             android:layout_marginStart="@dimen/dimen8"
             android:src="@drawable/circle_blank"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
     </LinearLayout>
 

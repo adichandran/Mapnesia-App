@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -23,7 +24,8 @@
                 android:layout_marginTop="@dimen/dimen20"
                 android:layout_marginEnd="@dimen/dimen20"
                 android:src="@drawable/close"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                tools:ignore="ContentDescription" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -37,7 +39,8 @@
                     android:layout_height="@dimen/dimen100"
                     android:background="@drawable/btn_kuy"
                     android:src="@drawable/mapnesia"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -55,7 +58,7 @@
                     android:fontFamily="@font/montserrat"
                     android:gravity="center"
                     android:textColor="?attr/colorOnBackground"
-                    android:text="Ver. 1.2.2"/>
+                    android:text="@string/version"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -64,7 +67,7 @@
                     android:fontFamily="@font/montserrat"
                     android:textColor="?attr/colorOnBackground"
                     android:gravity="center"
-                    android:text="Created By"/>
+                    android:text="@string/created_by"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -74,7 +77,7 @@
                     android:fontFamily="@font/montserrat"
                     android:textColor="?attr/colorOnBackground"
                     android:textSize="@dimen/dimensp18"
-                    android:text="Adi Chandra Nugraha"/>
+                    android:text="@string/name"/>
 
             </LinearLayout>
 

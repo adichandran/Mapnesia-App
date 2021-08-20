@@ -1,4 +1,35 @@
 <resources>
     <string name="app_name">Mapnesia App</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="siapa">Siapa Pahlawan yang mau di cari ?</string>
+    <string name="pahlawan_name">Pahlawan Name</string>
+    <string name="nama">Nama</string>
+    <string name="valuelahir">valueLahir</string>
+    <string name="berasal_dari">Berasal dari</string>
+    <string name="valueasal">valueAsal</string>
+    <string name="lahir">Lahir</string>
+    <string name="meninggal">Meninggal</string>
+    <string name="valuemeninggal">valueMeninggal</string>
+    <string name="di_makamkan">Di Makamkan</string>
+    <string name="valuemakam">valueMakam</string>
+    <string name="riwayat_singkat">Riwayat Singkat</string>
+    <string name="valueriwayat">valueRiwayat</string>
+    <string name="version">Ver. 1.2.2</string>
+    <string name="created_by">Created By</string>
+    <string name="name">Adi Chandra Nugraha</string>
+    <string name="deskripsi">Mapnesia app adalah aplikasi edukasi tentang mengenal para pahlawan indonesia. disini kamu akan mengenal lebih jauh para pahlawan indonesia</string>
+    <string name="social_media">Social Media</string>
+    <string name="find_me">Find Me</string>
+    <string name="about_version">About Version</string>
+    <string name="halo_selamat">Halo, Selamat Datang ...</string>
+    <string name="rekomendasi">Rekomendasi Pahlawan</string>
+    <string name="mapnesia">Mapnesia</string>
+    <string name="skip">Skip</string>
+    <string name="halo">Halo ...</string>
+    <string name="selamat_datang">Selamat Datang Di \nMapnesia app</string>
+    <string name="disini">Disini ...</string>
+    <string name="wall2">kita akan mengenal sosok para\nPahlawan indonesia. Dimulai dari lahir sampai perjuangannya\nmembela Indonesia.</string>
+    <string name="mari">Mari ...</string>
+    <string name="wall3">Kenali para pahlawan indonesia !</string>
+    <string name="kuy">Kuy</string>
 </resources>

@@ -9,7 +9,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +37,8 @@
                         android:layout_height="@dimen/dimen150"
                         android:layout_marginTop="@dimen/dimen12"
                         android:layout_marginBottom="@dimen/dimen12"
-                        android:src="@drawable/mapnesia"/>
+                        android:src="@drawable/mapnesia"
+                        tools:ignore="ContentDescription" />
 
                 </LinearLayout>
 
@@ -60,7 +62,7 @@
                         android:id="@+id/satu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mapnesia app adalah aplikasi edukasi tentang mengenal para pahlawan indonesia. disini kamu akan mengenal lebih jauh para pahlawan indonesia"
+                        android:text="@string/deskripsi"
                         android:fontFamily="@font/montserrat"
                         android:textSize="@dimen/dimensp18"
                         android:textColor="@color/white"/>
@@ -86,7 +88,7 @@
                     android:layout_marginBottom="@dimen/dimen10"
                     android:fontFamily="@font/montserrat"
                     android:textSize="@dimen/dimensp28"
-                    android:text="Social Media"
+                    android:text="@string/social_media"
                     android:textColor="?attr/colorOnBackground"/>
 
                 <LinearLayout
@@ -97,13 +99,12 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="@dimen/dimen12">
+                        android:layout_marginEnd="@dimen/dimen12">
 
                         <com.google.android.material.floatingactionbutton.FloatingActionButton
                             android:id="@+id/facebook"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/txt_social"
                             android:layout_margin="@dimen/dimen10"
                             android:src="@drawable/facebook"
                             app:backgroundTint="?attr/background"
@@ -119,9 +120,7 @@
                             android:id="@+id/insta"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/txt_social"
                             android:layout_margin="@dimen/dimen10"
-                            android:layout_toEndOf="@id/facebook"
                             android:src="@drawable/instagram"
                             app:backgroundTint="?attr/background"
                             tools:ignore="ContentDescription" />
@@ -135,11 +134,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/btn_kuy"
-                    android:layout_below="@id/facebook"
                     android:layout_marginTop="@dimen/dimen30"
                     android:scaleType="center"
                     android:textColor="@color/white"
-                    android:text="Find Me"
+                    android:text="@string/find_me"
                     android:textAllCaps="false"/>
 
                 <Button
@@ -147,11 +145,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/btn_kuy"
-                    android:layout_below="@id/maps"
                     android:layout_marginTop="@dimen/dimen30"
                     android:scaleType="center"
                     android:textColor="@color/white"
-                    android:text="About Version"
+                    android:text="@string/about_version"
                     android:textAllCaps="false"/>
 
             </LinearLayout>

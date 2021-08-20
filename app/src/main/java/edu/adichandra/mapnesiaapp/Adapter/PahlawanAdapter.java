@@ -106,3 +106,4 @@ public class PahlawanAdapter extends RecyclerView.Adapter<PahlawanAdapter.MyView
         notifyDataSetChanged();
     }
 }
+

@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -105,6 +106,14 @@ public class HomeFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(fragment, LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(pahlawanAdapter);
 
+        Button btnnotif = view.findViewById(R.id.btn);
+        btnnotif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NotificationReceiver notif = new NotificationReceiver();
+            }
+        });
+
         return view;
     }
 
@@ -151,5 +160,6 @@ public class HomeFragment extends Fragment {
         }
         return json;
     }
+
 
 }

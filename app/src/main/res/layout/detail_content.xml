@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -42,13 +43,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginBottom="@dimen/dimen4">
+                        android:layout_marginBottom="@dimen/dimen4"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                             android:layout_width="@dimen/dimen32"
                             android:layout_height="@dimen/dimen32"
                             android:src="@drawable/user"
-                            android:layout_marginRight="@dimen/dimen8"/>
+                            android:layout_marginEnd="@dimen/dimen8"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:id="@+id/txt_nama"
@@ -57,7 +60,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/montserrat"
                             android:textColor="?attr/colorOnBackground"
-                            android:text="Nama"
+                            android:text="@string/nama"
                             android:textSize="@dimen/dimensp18" />
 
                     </LinearLayout>
@@ -68,9 +71,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_lahir"
                         android:fontFamily="sans-serif-medium"
-                        android:text="valueLahir"
+                        android:text="@string/valuelahir"
                         android:textColor="?attr/colorOnBackground"
-                        android:textSize="@dimen/dimensp18" />
+                        android:textSize="@dimen/dimensp18"
+                        tools:ignore="ObsoleteLayoutParam" />
 
                 </LinearLayout>
 
@@ -85,13 +89,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginBottom="@dimen/dimen4">
+                        android:layout_marginBottom="@dimen/dimen4"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                             android:layout_width="@dimen/dimen32"
                             android:layout_height="@dimen/dimen32"
                             android:src="@drawable/map"
-                            android:layout_marginRight="@dimen/dimen8"/>
+                            android:layout_marginEnd="@dimen/dimen8"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:id="@+id/txt_asal"
@@ -100,7 +106,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/montserrat"
                             android:textColor="?attr/colorOnBackground"
-                            android:text="Berasal dari"
+                            android:text="@string/berasal_dari"
                             android:textSize="@dimen/dimensp18" />
 
                     </LinearLayout>
@@ -109,9 +115,8 @@
                         android:id="@+id/asal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/txt_lahir"
                         android:fontFamily="sans-serif-medium"
-                        android:text="valueAsal"
+                        android:text="@string/valueasal"
                         android:textColor="?attr/colorOnBackground"
                         android:textSize="@dimen/dimensp18" />
 
@@ -140,14 +145,15 @@
                     android:layout_height="@dimen/dimen32"
                     android:src="@drawable/birthday"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginEnd="@dimen/dimen8"/>
+                    android:layout_marginEnd="@dimen/dimen8"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/txt_lahir"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
-                    android:text="Lahir"
+                    android:text="@string/lahir"
                     android:textColor="?attr/colorOnBackground"
                     android:textSize="@dimen/dimensp24" />
 
@@ -157,9 +163,8 @@
                 android:id="@+id/lahir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txt_lahir"
                 android:fontFamily="sans-serif-light"
-                android:text="valueLahir"
+                android:text="@string/valuelahir"
                 android:textColor="?attr/colorOnBackground"
                 android:textSize="@dimen/dimensp18" />
 
@@ -176,21 +181,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/dimen4">
+                android:layout_marginBottom="@dimen/dimen4"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="@dimen/dimen32"
                     android:layout_height="@dimen/dimen32"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/bed"
-                    android:layout_marginEnd="@dimen/dimen8"/>
+                    android:layout_marginEnd="@dimen/dimen8"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/txt_meninggal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
-                    android:text="Meninggal"
+                    android:text="@string/meninggal"
                     android:textColor="?attr/colorOnBackground"
                     android:textSize="@dimen/dimensp24" />
 
@@ -200,9 +207,8 @@
                 android:id="@+id/meninggal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txt_lahir"
                 android:fontFamily="sans-serif-light"
-                android:text="valueMeninggal"
+                android:text="@string/valuemeninggal"
                 android:textColor="?attr/colorOnBackground"
                 android:textSize="@dimen/dimensp18" />
 
@@ -219,21 +225,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/dimen4">
+                android:layout_marginBottom="@dimen/dimen4"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="@dimen/dimen32"
                     android:layout_height="@dimen/dimen32"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/tombstone"
-                    android:layout_marginEnd="@dimen/dimen8"/>
+                    android:layout_marginEnd="@dimen/dimen8"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/txt_makam"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
-                    android:text="Di Makamkan"
+                    android:text="@string/di_makamkan"
                     android:textColor="?attr/colorOnBackground"
                     android:textSize="@dimen/dimensp24" />
 
@@ -243,9 +251,8 @@
                 android:id="@+id/makam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txt_lahir"
                 android:fontFamily="sans-serif-light"
-                android:text="valueMakam"
+                android:text="@string/valuemakam"
                 android:textColor="?attr/colorOnBackground"
                 android:textSize="@dimen/dimensp18" />
 
@@ -263,7 +270,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="center_vertical"
-                android:layout_marginBottom="@dimen/dimen4">
+                android:layout_marginBottom="@dimen/dimen4"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="@dimen/dimen32"
@@ -277,7 +285,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat"
-                    android:text="Riwayat Singkat"
+                    android:text="@string/riwayat_singkat"
                     android:textColor="?attr/colorOnBackground"
                     android:textSize="@dimen/dimensp24" />
 
@@ -287,10 +295,9 @@
                 android:id="@+id/riwayat_singkat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txt_lahir"
                 android:layout_marginTop="@dimen/dimen16"
                 android:fontFamily="sans-serif-light"
-                android:text="valueRiwayat"
+                android:text="@string/valueriwayat"
                 android:textColor="?attr/colorOnBackground"
                 android:textSize="16sp" />
 

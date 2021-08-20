@@ -71,4 +71,6 @@ public class Onboarding_FragmentA extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_onboarding__a, container, false);
     }
+
+
 }

@@ -32,11 +32,12 @@
                 android:inputType="text"
                 android:fontFamily="@font/montserrat"
                 android:layout_marginStart="@dimen/dimen5"
-                android:hint="Siapa Pahlawan yang mau di cari ?"
+                android:hint="@string/siapa"
                 android:textColorHint="@color/white"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:textSize="14sp"/>
+                android:textSize="14sp"
+                android:importantForAutofill="no" />
 
 
             <RelativeLayout
@@ -48,7 +49,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/search" />
+                    android:src="@drawable/search"
+                    tools:ignore="ContentDescription" />
 
             </RelativeLayout>
 
